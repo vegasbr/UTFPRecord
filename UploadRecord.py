@@ -38,6 +38,4 @@ def GetRec(ra, password):
     driver.find_element_by_xpath('//*[@id="div_fsInterno"]/table/tbody/tr[1]/td[3]').click() # disconectando do portal
     driver.close() # encerrando o drive
 
-    if cod[0] == 'ENADE-I':
-        return subj_sem[1:], subj[1:], cod[1:], cred[1:], med[1:], freq[1:], per[1:]
     return subj_sem, subj, cod, cred, med, freq, per
