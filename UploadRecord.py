@@ -34,7 +34,6 @@ def GetRec(ra, password):
     ano = [] # ano realizado a disciplina
 
     # Abaixo estou especificando a tabela do historico curricular e salvando nas listas os parametros
-
     hist = driver.find_element_by_xpath('//*[@id="tbl_hist"]/tbody/tr/td/div/center[1]/table/tbody/tr/td/table[1]/tbody')
     for row in hist.find_elements_by_xpath(".//tr"):
         table = [td.text for td in row.find_elements_by_tag_name('td')]
