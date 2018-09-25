@@ -24,13 +24,13 @@ def GetRec(ra, password):
     frame = driver.find_element_by_tag_name('iframe')
     driver.switch_to.frame(frame)
 
-    subj_sem = []
-    cod = []
-    subj = []
-    cred = []
-    med = []
-    freq = []
-    per = []
+    subj_sem = [] # semestre em que foi realizada a disciplina
+    cod = [] # codiga da disciplina
+    subj = [] # nome da diciplina
+    cred = [] # creditos da disciplina
+    med = [] # media da disciplina
+    freq = [] # frequencia da disciplina
+    per = [] # periodo da disciplina
 
     # Abaixo estou especificando a tabela do historico curricular e salvando nas listas os parametros
 
