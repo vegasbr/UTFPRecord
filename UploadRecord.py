@@ -2,6 +2,15 @@
 
 from selenium import webdriver
 
+'''Antes de tudo, deve-se ter o chrome webdriver baixado e especificado nas
+variaveis de ambiente
+
+tutorial:
+import UploadRecord as up
+up.GetRec('SEU_RA','SUA_SENHA')
+Acontece a magica !
+'''
+
 options = webdriver.ChromeOptions()
 options.add_argument('--headless') # Desabilitando a tab do chrome
 options.add_argument('--disable-gpu') # Desablitando o GPU para renderizar o Chrome
@@ -22,6 +31,8 @@ def GetRec(ra, password):
     med = []
     freq = []
     per = []
+
+    # Abaixo estou especificando a tabela do historico curricular e salvando nas listas os parametros
 
     hist = driver.find_element_by_xpath('//*[@id="tbl_hist"]/tbody/tr/td/div/center[1]/table/tbody/tr/td/table[1]/tbody')
     for row in hist.find_elements_by_xpath(".//tr"):
